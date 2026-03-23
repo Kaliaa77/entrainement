@@ -1,0 +1,10 @@
+<div class="container col-lg-4 mt-4">
+  <h3 class="mb-5">Ajouter un nouveau film dans une liste du genre : <%= @list.name %></h3>
+
+  <%= simple_form_for [@list, @movie], url: list_movies_path(@list) do |f| %>
+    <%= f.input :title, collection: Movie.all.map { |m| [m.title, m.id] }, as: :select, prompt: "Choisir un film" %>
+    <%= f.button :submit, class: "text-white btn btn-secondary" %>
+  <% end %>
+
+  <%= link_to "Retourner à la liste des genres de film", lists_path, class: "btn btn-outline-danger text-decoration-none rounded-pill mt-5" %>
+</div>
