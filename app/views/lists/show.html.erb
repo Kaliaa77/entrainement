@@ -1,0 +1,17 @@
+<h1 class="mb-5 mt-5 text-center rounded-4"> Liste des films du genre : <%= @list.name %> </h1>
+
+
+<div class="d-flex justify-content-evenly">
+  <% @movies.each do |movie|%>
+    <div class="card" style="width: 18rem;">
+      <img src="<%= movie.poster_url %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Titre :</strong> <%= movie.title %></li>
+          <li class="list-group-item"><strong>Description :</strong> <%= movie.overview %></li>
+          <li class="list-group-item"><strong>Note :</strong> <%= movie.rating %>⭐</li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,1 +1,9 @@
 <h1>Voici la liste</h1>
+
+<ul>
+  <% @list.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Ajouter un nouveau genre", new_list_path, class: "btn btn-outline-primary" %>
