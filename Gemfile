@@ -22,6 +22,7 @@ gem "simple_form"
 gem "sassc-rails"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
+gem "pg", "~> 1.1"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
